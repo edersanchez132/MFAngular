@@ -6,6 +6,10 @@ const routes: Routes = [{
   path:'',
   component:HomeComponent,
   pathMatch:'full'
+},
+{
+  path:'mf',
+  loadChildren:()=> import('mf/MostrardatosModule').then((m) => m.MostrardatosModule)
 }];
 
 @NgModule({
